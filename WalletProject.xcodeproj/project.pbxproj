@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AE365B9A1AEC2726002458FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE365B991AEC2726002458FA /* Images.xcassets */; };
+		AE365B9C1AEC2CC9002458FA /* WalletNewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE365B9B1AEC2CC9002458FA /* WalletNewItem.swift */; };
 		AE3B2FEC1AEB1DC800AA1316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */; };
-		AE3B2FEE1AEB1DC800AA1316 /* WalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B2FED1AEB1DC800AA1316 /* WalletItem.swift */; };
+		AE3B2FEE1AEB1DC800AA1316 /* WalletManageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B2FED1AEB1DC800AA1316 /* WalletManageItem.swift */; };
 		AE3B2FF61AEB1DC800AA1316 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3B2FF41AEB1DC800AA1316 /* LaunchScreen.xib */; };
 		AE3B30021AEB1DC900AA1316 /* WalletProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B30011AEB1DC900AA1316 /* WalletProjectTests.swift */; };
 		AE3B300C1AEB1E0700AA1316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3B300B1AEB1E0700AA1316 /* Main.storyboard */; };
@@ -34,10 +35,11 @@
 
 /* Begin PBXFileReference section */
 		AE365B991AEC2726002458FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AE365B9B1AEC2CC9002458FA /* WalletNewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletNewItem.swift; sourceTree = "<group>"; };
 		AE3B2FE61AEB1DC800AA1316 /* WalletProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3B2FEA1AEB1DC800AA1316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE3B2FED1AEB1DC800AA1316 /* WalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItem.swift; sourceTree = "<group>"; };
+		AE3B2FED1AEB1DC800AA1316 /* WalletManageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManageItem.swift; sourceTree = "<group>"; };
 		AE3B2FF51AEB1DC800AA1316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AE3B2FFB1AEB1DC900AA1316 /* WalletProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3B30001AEB1DC900AA1316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +104,8 @@
 			children = (
 				AE3B30111AEB1E7D00AA1316 /* fmdb */,
 				AE3B300D1AEB1E3D00AA1316 /* WalletMain.swift */,
-				AE3B2FED1AEB1DC800AA1316 /* WalletItem.swift */,
+				AE365B9B1AEC2CC9002458FA /* WalletNewItem.swift */,
+				AE3B2FED1AEB1DC800AA1316 /* WalletManageItem.swift */,
 				AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */,
 				AE3B300B1AEB1E0700AA1316 /* Main.storyboard */,
 				AE3B2FF41AEB1DC800AA1316 /* LaunchScreen.xib */,
@@ -257,7 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3B300E1AEB1E3D00AA1316 /* WalletMain.swift in Sources */,
-				AE3B2FEE1AEB1DC800AA1316 /* WalletItem.swift in Sources */,
+				AE3B2FEE1AEB1DC800AA1316 /* WalletManageItem.swift in Sources */,
+				AE365B9C1AEC2CC9002458FA /* WalletNewItem.swift in Sources */,
 				AE3B2FEC1AEB1DC800AA1316 /* AppDelegate.swift in Sources */,
 				AE3B301E1AEB1E9400AA1316 /* FMDatabase.m in Sources */,
 				AE3B301F1AEB1E9400AA1316 /* FMResultSet.m in Sources */,

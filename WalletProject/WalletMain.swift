@@ -12,6 +12,11 @@ class WalletMain: UITableViewController {
     
     var databasePath = NSString()
     
+    override func viewDidAppear(animated: Bool) {
+        loadAllItems()
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,6 +103,10 @@ class WalletMain: UITableViewController {
     var icons = Array<String>()
     
     func loadAllItems(){
+        names = Array<String>()
+        values = Array<String>()
+        icons = Array<String>()
+        
         let itemDB = FMDatabase(path: databasePath as String)
         
         if itemDB.open() {
@@ -178,6 +187,15 @@ class WalletMain: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "manageItem" {
+            if let destination = segue.destinationViewController as? WalletManageItem {
+                if let itemIndex = tableView.indexPathForSelectedRow()?.row {
+                    destination.tableItem = names[itemIndex]
+                }
+            }
+        }
+    }
+    
 }
 
