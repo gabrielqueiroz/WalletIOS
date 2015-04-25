@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE365B9A1AEC2726002458FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE365B991AEC2726002458FA /* Images.xcassets */; };
 		AE3B2FEC1AEB1DC800AA1316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */; };
-		AE3B2FEE1AEB1DC800AA1316 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B2FED1AEB1DC800AA1316 /* ViewController.swift */; };
-		AE3B2FF11AEB1DC800AA1316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3B2FEF1AEB1DC800AA1316 /* Main.storyboard */; };
-		AE3B2FF31AEB1DC800AA1316 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3B2FF21AEB1DC800AA1316 /* Images.xcassets */; };
+		AE3B2FEE1AEB1DC800AA1316 /* WalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B2FED1AEB1DC800AA1316 /* WalletItem.swift */; };
 		AE3B2FF61AEB1DC800AA1316 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3B2FF41AEB1DC800AA1316 /* LaunchScreen.xib */; };
 		AE3B30021AEB1DC900AA1316 /* WalletProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B30011AEB1DC900AA1316 /* WalletProjectTests.swift */; };
+		AE3B300C1AEB1E0700AA1316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3B300B1AEB1E0700AA1316 /* Main.storyboard */; };
+		AE3B300E1AEB1E3D00AA1316 /* WalletMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B300D1AEB1E3D00AA1316 /* WalletMain.swift */; };
+		AE3B30101AEB1E5900AA1316 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3B300F1AEB1E5900AA1316 /* libsqlite3.dylib */; };
+		AE3B301E1AEB1E9400AA1316 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B30151AEB1E9400AA1316 /* FMDatabase.m */; };
+		AE3B301F1AEB1E9400AA1316 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B30171AEB1E9400AA1316 /* FMResultSet.m */; };
+		AE3B30201AEB1E9400AA1316 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B30191AEB1E9400AA1316 /* FMDatabaseQueue.m */; };
+		AE3B30211AEB1E9400AA1316 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B301B1AEB1E9400AA1316 /* FMDatabaseAdditions.m */; };
+		AE3B30221AEB1E9400AA1316 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B301D1AEB1E9400AA1316 /* FMDatabasePool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +33,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE365B991AEC2726002458FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AE3B2FE61AEB1DC800AA1316 /* WalletProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3B2FEA1AEB1DC800AA1316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE3B2FED1AEB1DC800AA1316 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE3B2FF01AEB1DC800AA1316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AE3B2FF21AEB1DC800AA1316 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AE3B2FED1AEB1DC800AA1316 /* WalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItem.swift; sourceTree = "<group>"; };
 		AE3B2FF51AEB1DC800AA1316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AE3B2FFB1AEB1DC900AA1316 /* WalletProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3B30001AEB1DC900AA1316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE3B30011AEB1DC900AA1316 /* WalletProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletProjectTests.swift; sourceTree = "<group>"; };
+		AE3B300B1AEB1E0700AA1316 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AE3B300D1AEB1E3D00AA1316 /* WalletMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletMain.swift; sourceTree = "<group>"; };
+		AE3B300F1AEB1E5900AA1316 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AE3B30121AEB1E9300AA1316 /* WalletProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WalletProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE3B30131AEB1E9400AA1316 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		AE3B30141AEB1E9400AA1316 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		AE3B30151AEB1E9400AA1316 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		AE3B30161AEB1E9400AA1316 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		AE3B30171AEB1E9400AA1316 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		AE3B30181AEB1E9400AA1316 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		AE3B30191AEB1E9400AA1316 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		AE3B301A1AEB1E9400AA1316 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		AE3B301B1AEB1E9400AA1316 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		AE3B301C1AEB1E9400AA1316 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		AE3B301D1AEB1E9400AA1316 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3B30101AEB1E5900AA1316 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +81,7 @@
 		AE3B2FDD1AEB1DC800AA1316 = {
 			isa = PBXGroup;
 			children = (
+				AE3B300F1AEB1E5900AA1316 /* libsqlite3.dylib */,
 				AE3B2FE81AEB1DC800AA1316 /* WalletProject */,
 				AE3B2FFE1AEB1DC900AA1316 /* WalletProjectTests */,
 				AE3B2FE71AEB1DC800AA1316 /* Products */,
@@ -77,11 +100,13 @@
 		AE3B2FE81AEB1DC800AA1316 /* WalletProject */ = {
 			isa = PBXGroup;
 			children = (
+				AE3B30111AEB1E7D00AA1316 /* fmdb */,
+				AE3B300D1AEB1E3D00AA1316 /* WalletMain.swift */,
+				AE3B2FED1AEB1DC800AA1316 /* WalletItem.swift */,
 				AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */,
-				AE3B2FED1AEB1DC800AA1316 /* ViewController.swift */,
-				AE3B2FEF1AEB1DC800AA1316 /* Main.storyboard */,
-				AE3B2FF21AEB1DC800AA1316 /* Images.xcassets */,
+				AE3B300B1AEB1E0700AA1316 /* Main.storyboard */,
 				AE3B2FF41AEB1DC800AA1316 /* LaunchScreen.xib */,
+				AE365B991AEC2726002458FA /* Images.xcassets */,
 				AE3B2FE91AEB1DC800AA1316 /* Supporting Files */,
 			);
 			path = WalletProject;
@@ -110,6 +135,25 @@
 				AE3B30001AEB1DC900AA1316 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE3B30111AEB1E7D00AA1316 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				AE3B30131AEB1E9400AA1316 /* FMDB.h */,
+				AE3B30141AEB1E9400AA1316 /* FMDatabase.h */,
+				AE3B30151AEB1E9400AA1316 /* FMDatabase.m */,
+				AE3B30161AEB1E9400AA1316 /* FMResultSet.h */,
+				AE3B30171AEB1E9400AA1316 /* FMResultSet.m */,
+				AE3B30181AEB1E9400AA1316 /* FMDatabaseQueue.h */,
+				AE3B30191AEB1E9400AA1316 /* FMDatabaseQueue.m */,
+				AE3B301A1AEB1E9400AA1316 /* FMDatabaseAdditions.h */,
+				AE3B301B1AEB1E9400AA1316 /* FMDatabaseAdditions.m */,
+				AE3B301C1AEB1E9400AA1316 /* FMDatabasePool.h */,
+				AE3B301D1AEB1E9400AA1316 /* FMDatabasePool.m */,
+				AE3B30121AEB1E9300AA1316 /* WalletProject-Bridging-Header.h */,
+			);
+			name = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +236,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE3B2FF11AEB1DC800AA1316 /* Main.storyboard in Resources */,
+				AE365B9A1AEC2726002458FA /* Images.xcassets in Resources */,
+				AE3B300C1AEB1E0700AA1316 /* Main.storyboard in Resources */,
 				AE3B2FF61AEB1DC800AA1316 /* LaunchScreen.xib in Resources */,
-				AE3B2FF31AEB1DC800AA1316 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +256,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE3B2FEE1AEB1DC800AA1316 /* ViewController.swift in Sources */,
+				AE3B300E1AEB1E3D00AA1316 /* WalletMain.swift in Sources */,
+				AE3B2FEE1AEB1DC800AA1316 /* WalletItem.swift in Sources */,
 				AE3B2FEC1AEB1DC800AA1316 /* AppDelegate.swift in Sources */,
+				AE3B301E1AEB1E9400AA1316 /* FMDatabase.m in Sources */,
+				AE3B301F1AEB1E9400AA1316 /* FMResultSet.m in Sources */,
+				AE3B30221AEB1E9400AA1316 /* FMDatabasePool.m in Sources */,
+				AE3B30211AEB1E9400AA1316 /* FMDatabaseAdditions.m in Sources */,
+				AE3B30201AEB1E9400AA1316 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +286,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AE3B2FEF1AEB1DC800AA1316 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE3B2FF01AEB1DC800AA1316 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AE3B2FF41AEB1DC800AA1316 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,9 +384,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WalletProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WalletProject/WalletProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +397,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WalletProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WalletProject/WalletProject-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +458,7 @@
 				AE3B30071AEB1DC900AA1316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE3B30081AEB1DC900AA1316 /* Build configuration list for PBXNativeTarget "WalletProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +467,7 @@
 				AE3B300A1AEB1DC900AA1316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
