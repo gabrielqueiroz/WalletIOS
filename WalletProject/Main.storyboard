@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="ZTi-a7-krq" id="6Qi-FY-EeH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Wallet" id="Mim-ZJ-uig">
+                    <navigationItem key="navigationItem" title="iWallet" id="Mim-ZJ-uig">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6fF-h0-uvl">
                             <connections>
                                 <segue destination="NKK-xY-1va" kind="show" id="ciT-0g-CPQ"/>
@@ -416,7 +416,7 @@
                                     <segue destination="s5i-lw-08q" kind="show" identifier="quickRemove" id="DsJ-sQ-DvC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJq-BC-Ksl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJq-BC-Ksl">
                                 <rect key="frame" x="16" y="405" width="568" height="71"/>
                                 <color key="backgroundColor" red="0.3845788503" green="0.59312619359999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -425,16 +425,47 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="history" translatesAutoresizingMaskIntoConstraints="NO" id="KeR-HK-8QL">
+                                <rect key="frame" x="27" y="401" width="52" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="UEt-lh-xko"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remicon" translatesAutoresizingMaskIntoConstraints="NO" id="ClH-oY-OzT">
+                                <rect key="frame" x="27" y="298" width="52" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="rDf-ZD-h4p"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addicon" translatesAutoresizingMaskIntoConstraints="NO" id="9gM-PW-M6Q">
+                                <rect key="frame" x="27" y="192" width="52" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="H4x-aP-OMa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ClH-oY-OzT" firstAttribute="top" secondItem="9gM-PW-M6Q" secondAttribute="bottom" constant="27" id="2rF-FE-u4k"/>
+                            <constraint firstItem="KeR-HK-8QL" firstAttribute="top" secondItem="Oxx-LC-M66" secondAttribute="bottom" constant="28" id="49G-in-fuv"/>
+                            <constraint firstItem="gJq-BC-Ksl" firstAttribute="trailing" secondItem="Oxx-LC-M66" secondAttribute="trailing" id="Dm6-wb-JGJ"/>
                             <constraint firstItem="QUp-D5-4MQ" firstAttribute="trailing" secondItem="Oxx-LC-M66" secondAttribute="trailing" id="EDI-Zs-IL2"/>
+                            <constraint firstItem="9gM-PW-M6Q" firstAttribute="leading" secondItem="ClH-oY-OzT" secondAttribute="leading" id="IG1-Gz-EqB"/>
+                            <constraint firstItem="9gM-PW-M6Q" firstAttribute="centerY" secondItem="QUp-D5-4MQ" secondAttribute="centerY" id="J6h-hY-b5o"/>
+                            <constraint firstItem="gJq-BC-Ksl" firstAttribute="centerY" secondItem="KeR-HK-8QL" secondAttribute="centerY" id="KjI-aQ-pDQ"/>
+                            <constraint firstItem="KeR-HK-8QL" firstAttribute="top" secondItem="ClH-oY-OzT" secondAttribute="bottom" constant="24" id="QGm-Vg-Aks"/>
                             <constraint firstItem="QUp-D5-4MQ" firstAttribute="centerX" secondItem="44b-uY-UvY" secondAttribute="centerX" id="TPc-Ac-Sn9"/>
+                            <constraint firstItem="ClH-oY-OzT" firstAttribute="leading" secondItem="KeR-HK-8QL" secondAttribute="leading" id="UUE-Nb-p2K"/>
+                            <constraint firstItem="gJq-BC-Ksl" firstAttribute="leading" secondItem="Oxx-LC-M66" secondAttribute="leading" id="Zj8-bu-fCB"/>
+                            <constraint firstItem="KeR-HK-8QL" firstAttribute="leading" secondItem="Y1H-F9-gXy" secondAttribute="leadingMargin" constant="11" id="ZuE-rS-p8h"/>
                             <constraint firstItem="Oxx-LC-M66" firstAttribute="top" secondItem="QUp-D5-4MQ" secondAttribute="bottom" constant="35" id="bam-9F-f4o"/>
+                            <constraint firstItem="V2r-zi-Fuo" firstAttribute="top" secondItem="KeR-HK-8QL" secondAttribute="bottom" constant="120" id="d6G-Xg-clK"/>
                             <constraint firstItem="Oxx-LC-M66" firstAttribute="leading" secondItem="QUp-D5-4MQ" secondAttribute="leading" id="ddy-lk-OlN"/>
                             <constraint firstItem="44b-uY-UvY" firstAttribute="top" secondItem="xp5-P4-hk7" secondAttribute="bottom" constant="8" symbolic="YES" id="eJk-Gd-HNt"/>
                             <constraint firstItem="Oxx-LC-M66" firstAttribute="height" secondItem="QUp-D5-4MQ" secondAttribute="height" id="fza-Qi-F1c"/>
                             <constraint firstItem="V2r-zi-Fuo" firstAttribute="top" secondItem="Oxx-LC-M66" secondAttribute="bottom" constant="227" id="kD9-8H-9iy"/>
+                            <constraint firstItem="gJq-BC-Ksl" firstAttribute="top" secondItem="Oxx-LC-M66" secondAttribute="bottom" constant="32" id="kuP-aW-517"/>
+                            <constraint firstItem="ClH-oY-OzT" firstAttribute="centerY" secondItem="Oxx-LC-M66" secondAttribute="centerY" id="nEO-f9-ui7"/>
                             <constraint firstItem="Oxx-LC-M66" firstAttribute="trailing" secondItem="Y1H-F9-gXy" secondAttribute="trailingMargin" id="rUu-nf-sCy"/>
                             <constraint firstItem="Oxx-LC-M66" firstAttribute="leading" secondItem="Y1H-F9-gXy" secondAttribute="leadingMargin" id="sof-so-lZF"/>
                             <constraint firstItem="QUp-D5-4MQ" firstAttribute="top" secondItem="44b-uY-UvY" secondAttribute="bottom" constant="8" symbolic="YES" id="u3H-AN-hHu"/>
@@ -465,8 +496,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addicon" width="512" height="512"/>
         <image name="bank" width="512" height="512"/>
         <image name="creditcard" width="512" height="512"/>
+        <image name="history" width="2000" height="2000"/>
+        <image name="remicon" width="512" height="512"/>
         <image name="wallet" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>

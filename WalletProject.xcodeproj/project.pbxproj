@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE365B9A1AEC2726002458FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE365B991AEC2726002458FA /* Images.xcassets */; };
 		AE365B9C1AEC2CC9002458FA /* WalletNewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE365B9B1AEC2CC9002458FA /* WalletNewItem.swift */; };
 		AE3B2FEC1AEB1DC800AA1316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */; };
 		AE3B2FEE1AEB1DC800AA1316 /* WalletManageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B2FED1AEB1DC800AA1316 /* WalletManageItem.swift */; };
@@ -21,6 +20,7 @@
 		AE3B30201AEB1E9400AA1316 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B30191AEB1E9400AA1316 /* FMDatabaseQueue.m */; };
 		AE3B30211AEB1E9400AA1316 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B301B1AEB1E9400AA1316 /* FMDatabaseAdditions.m */; };
 		AE3B30221AEB1E9400AA1316 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B301D1AEB1E9400AA1316 /* FMDatabasePool.m */; };
+		AEEAE8841AEC45E200608A06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEAE8831AEC45E200608A06 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE365B991AEC2726002458FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AE365B9B1AEC2CC9002458FA /* WalletNewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletNewItem.swift; sourceTree = "<group>"; };
 		AE3B2FE61AEB1DC800AA1316 /* WalletProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3B2FEA1AEB1DC800AA1316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		AE3B301B1AEB1E9400AA1316 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		AE3B301C1AEB1E9400AA1316 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
 		AE3B301D1AEB1E9400AA1316 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		AEEAE8831AEC45E200608A06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 				AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */,
 				AE3B300B1AEB1E0700AA1316 /* Main.storyboard */,
 				AE3B2FF41AEB1DC800AA1316 /* LaunchScreen.xib */,
-				AE365B991AEC2726002458FA /* Images.xcassets */,
+				AEEAE8831AEC45E200608A06 /* Images.xcassets */,
 				AE3B2FE91AEB1DC800AA1316 /* Supporting Files */,
 			);
 			path = WalletProject;
@@ -239,7 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE365B9A1AEC2726002458FA /* Images.xcassets in Resources */,
+				AEEAE8841AEC45E200608A06 /* Images.xcassets in Resources */,
 				AE3B300C1AEB1E0700AA1316 /* Main.storyboard in Resources */,
 				AE3B2FF61AEB1DC800AA1316 /* LaunchScreen.xib in Resources */,
 			);
