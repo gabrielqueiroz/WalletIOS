@@ -20,6 +20,7 @@
 		AE3B30201AEB1E9400AA1316 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B30191AEB1E9400AA1316 /* FMDatabaseQueue.m */; };
 		AE3B30211AEB1E9400AA1316 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B301B1AEB1E9400AA1316 /* FMDatabaseAdditions.m */; };
 		AE3B30221AEB1E9400AA1316 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3B301D1AEB1E9400AA1316 /* FMDatabasePool.m */; };
+		AE9FF01E1AEC6163007DE2D4 /* WalletAddRemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9FF01D1AEC6163007DE2D4 /* WalletAddRemItem.swift */; };
 		AEEAE8841AEC45E200608A06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEAE8831AEC45E200608A06 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		AE3B301B1AEB1E9400AA1316 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		AE3B301C1AEB1E9400AA1316 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
 		AE3B301D1AEB1E9400AA1316 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		AE9FF01D1AEC6163007DE2D4 /* WalletAddRemItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletAddRemItem.swift; sourceTree = "<group>"; };
 		AEEAE8831AEC45E200608A06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				AE3B30111AEB1E7D00AA1316 /* fmdb */,
 				AE3B300D1AEB1E3D00AA1316 /* WalletMain.swift */,
 				AE365B9B1AEC2CC9002458FA /* WalletNewItem.swift */,
+				AE9FF01D1AEC6163007DE2D4 /* WalletAddRemItem.swift */,
 				AE3B2FED1AEB1DC800AA1316 /* WalletManageItem.swift */,
 				AE3B2FEB1AEB1DC800AA1316 /* AppDelegate.swift */,
 				AE3B300B1AEB1E0700AA1316 /* Main.storyboard */,
@@ -263,6 +266,7 @@
 				AE3B2FEE1AEB1DC800AA1316 /* WalletManageItem.swift in Sources */,
 				AE365B9C1AEC2CC9002458FA /* WalletNewItem.swift in Sources */,
 				AE3B2FEC1AEB1DC800AA1316 /* AppDelegate.swift in Sources */,
+				AE9FF01E1AEC6163007DE2D4 /* WalletAddRemItem.swift in Sources */,
 				AE3B301E1AEB1E9400AA1316 /* FMDatabase.m in Sources */,
 				AE3B301F1AEB1E9400AA1316 /* FMResultSet.m in Sources */,
 				AE3B30221AEB1E9400AA1316 /* FMDatabasePool.m in Sources */,

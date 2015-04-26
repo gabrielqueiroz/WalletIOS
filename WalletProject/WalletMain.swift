@@ -42,7 +42,7 @@ class WalletMain: UITableViewController {
                     println("Error: \(itemDB.lastErrorMessage())")
                 }
                 
-                sql_stmt = "CREATE TABLE IF NOT EXISTS HISTORY ( HISTORYID INTEGER PRIMARY KEY AUTOINCREMENT, VALUE REAL, LOCAL TEXT, DATE DATETIME TEXT, ITEMFK INTEGER, OPERATION TEXT, FOREIGN KEY (ITEMFK) REFERENCES ITEM (ITEMID))"
+                sql_stmt = "CREATE TABLE IF NOT EXISTS HISTORY ( HISTORYID INTEGER PRIMARY KEY AUTOINCREMENT, VALUE TEXT, REFERENCE TEXT, DATE DATETIME TEXT, ITEMFK INTEGER, OPERATION TEXT, FOREIGN KEY (ITEMFK) REFERENCES ITEM (ITEMID))"
                 
                 if !itemDB.executeStatements(sql_stmt) {
                     println("Error: \(itemDB.lastErrorMessage())")
@@ -68,7 +68,7 @@ class WalletMain: UITableViewController {
                 withArgumentsInArray: nil)
             
             if(results?.next() == true) {
-                println("Warn: TABLE ALREADY POPULATED")
+                //println("Warn: TABLE ALREADY POPULATED")
             } else {
                 
                 var insertSQL = "INSERT INTO ITEMS (name, value, icon) VALUES ('Wallet', '10.0', 'wallet')"
@@ -171,9 +171,9 @@ class WalletMain: UITableViewController {
             let result = itemDB.executeUpdate(querySQL, withArgumentsInArray: nil)
             
             if !result {
-                println("Warn: FAILED TO DELETE")
+                //println("Warn: FAILED TO DELETE")
             } else {
-                println("Warn: RECORD DELETED")
+                //println("Warn: RECORD DELETED")
             }
             
             itemDB.close()

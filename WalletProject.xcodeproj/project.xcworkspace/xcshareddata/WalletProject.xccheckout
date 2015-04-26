@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F0530EFB-1F94-41FE-B3AD-4D1B156D6391</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>WalletProject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>94AECDDE5D1FC753CEC64F74C1048904633A64C4</key>
 		<string>https://github.com/gabrielqueiroz/WalletIOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>WalletProject.xcodeproj/project.xcworkspace</string>
+	<string>WalletProject.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>94AECDDE5D1FC753CEC64F74C1048904633A64C4</key>
