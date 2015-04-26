@@ -25,7 +25,7 @@ class WalletMain: UITableViewController {
         
         let docsDir = dirPaths[0] as! String
         
-        databasePath = docsDir.stringByAppendingPathComponent("wallet_0.1.db")
+        databasePath = docsDir.stringByAppendingPathComponent("wallet_0.5.db")
         
         if !filemgr.fileExistsAtPath(databasePath as String) {
             
@@ -42,7 +42,13 @@ class WalletMain: UITableViewController {
                     println("Error: \(itemDB.lastErrorMessage())")
                 }
                 
-                sql_stmt = "CREATE TABLE IF NOT EXISTS HISTORY ( HISTORYID INTEGER PRIMARY KEY AUTOINCREMENT, VALUE TEXT, REFERENCE TEXT, DATE DATETIME TEXT, ITEMFK INTEGER, OPERATION TEXT, FOREIGN KEY (ITEMFK) REFERENCES ITEM (ITEMID))"
+                sql_stmt = "CREATE TABLE IF NOT EXISTS HISTORY ( HISTORYID INTEGER PRIMARY KEY AUTOINCREMENT, VALUE TEXT, REFERENCE TEXT, DATE TEXT, ITEMFK INTEGER, OPERATION TEXT, FOREIGN KEY (ITEMFK) REFERENCES ITEM (ITEMID))"
+                
+                if !itemDB.executeStatements(sql_stmt) {
+                    println("Error: \(itemDB.lastErrorMessage())")
+                }
+
+                sql_stmt = "CREATE TABLE IF NOT EXISTS REFERENCE ( REFERENCEID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ITEMFK INTEGER, FOREIGN KEY (ITEMFK) REFERENCES ITEM (ITEMID))"
                 
                 if !itemDB.executeStatements(sql_stmt) {
                     println("Error: \(itemDB.lastErrorMessage())")

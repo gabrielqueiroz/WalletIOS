@@ -20,7 +20,7 @@ class WalletNewItem: UIViewController {
         
         let docsDir = dirPaths[0] as! String
         
-        databasePath = docsDir.stringByAppendingPathComponent("wallet_0.1.db")
+        databasePath = docsDir.stringByAppendingPathComponent("wallet_0.5.db")
         
         if !filemgr.fileExistsAtPath(databasePath as String) {
             

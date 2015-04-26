@@ -21,12 +21,14 @@ class WalletAddRemItem: UIViewController {
         
         self.title = operation as String
         
+        println("DEBUG ITEM \(itemID) OPERATION \(operation) OLD VALUE \(oldValue)")
+        
         let filemgr = NSFileManager.defaultManager()
         let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         
         let docsDir = dirPaths[0] as! String
         
-        databasePath = docsDir.stringByAppendingPathComponent("wallet_0.1.db")
+        databasePath = docsDir.stringByAppendingPathComponent("wallet_0.5.db")
         
         if !filemgr.fileExistsAtPath(databasePath as String) {
             
@@ -36,6 +38,8 @@ class WalletAddRemItem: UIViewController {
                 println("Error: \(itemDB.lastErrorMessage())")
             }
         }
+        
+        loadReferences()
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,8 +74,90 @@ class WalletAddRemItem: UIViewController {
         }
     }
     
-    var picker = ["-","Restaurant","Grocery","Outlet","Fast Food"]
+    var picker = ["-"]
     
+    func loadReferences(){
+        let itemDB = FMDatabase(path: databasePath as String)
+        
+        if itemDB.open() {
+            
+            let querySQL = "SELECT NAME FROM REFERENCE WHERE ITEMFK='\(itemID)'"
+        
+            var results:FMResultSet? = itemDB.executeQuery(querySQL,
+            withArgumentsInArray: nil)
+            
+            if(results?.next() == false){
+                var insertSQL = "INSERT INTO REFERENCE (NAME, ITEMFK) VALUES ('Restaurant','\(itemID)')"
+                var result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
+                if !result {
+                    println("Warn: FAILED TO ADD A NEW REFERENCE")
+                }
+                insertSQL = "INSERT INTO REFERENCE (NAME, ITEMFK) VALUES ('Grocery','\(itemID)')"
+                result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
+                if !result {
+                    println("Warn: FAILED TO ADD A NEW REFERENCE")
+                }
+                insertSQL = "INSERT INTO REFERENCE (NAME, ITEMFK) VALUES ('Outlet','\(itemID)')"
+                result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
+                if !result {
+                    println("Warn: FAILED TO ADD A NEW REFERENCE")
+                }
+                insertSQL = "INSERT INTO REFERENCE (NAME, ITEMFK) VALUES ('Fast Food','\(itemID)')"
+                result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
+                if !result {
+                    println("Warn: FAILED TO ADD A NEW REFERENCE")
+                }
+                loadReferences()
+            } else {
+                let name = results?.stringForColumn("name")
+                picker.insert(name!, atIndex: 1)
+                while(results?.next() == true) {
+                    let name = results?.stringForColumn("name")
+                    picker.insert(name!, atIndex: 1)
+                }
+            }
+            
+            itemDB.close()
+            
+        } else {
+            println("Error: \(itemDB.lastErrorMessage())")
+        }
+    }
+    
+    func insertReference(){
+        let itemDB = FMDatabase(path: databasePath as String)
+        
+        if itemDB.open() {
+            let insertSQL = "INSERT INTO REFERENCE (NAME, ITEMFK) VALUES ('\(reference.text)','\(itemID)')"
+            let result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
+            if !result {
+                println("Warn: FAILED TO ADD A NEW REFERENCE")
+            }
+            
+            itemDB.close()
+            
+        } else {
+            println("Error: \(itemDB.lastErrorMessage())")
+        }
+    }
+    
+    func deleteReference(){
+        let itemDB = FMDatabase(path: databasePath as String)
+        
+        if itemDB.open() {
+            let insertSQL = "DELETE FROM REFERENCE WHERE NAME=('\(pickerUI.description)')"
+            let result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
+            if !result {
+                println("Warn: FAILED TO DELETE A REFERENCE")
+            } else {
+                println("Warn: DELETED A REFERENCE")}
+
+            itemDB.close()
+        } else {
+            println("Error: \(itemDB.lastErrorMessage())")
+        }
+    }
+
     @IBOutlet weak var pickerUI: UIPickerView!
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -89,18 +175,30 @@ class WalletAddRemItem: UIViewController {
     @IBOutlet weak var reference: UITextField!
     
     @IBAction func addReference(sender: UIButton) {
+        insertReference()
         picker.insert(reference.text, atIndex: 1)
         pickerUI.reloadAllComponents()
     }
     
-    func confirmAction(action: String){
+    @IBAction func remReference(sender: UIButton) {
+        println("BUTTON CLICKED \(pickerUI.)")
+        deleteReference()
+        picker = ["-"]
+        loadReferences()
+        pickerUI.reloadAllComponents()
+    }
+    
+    func confirmAction(){
         let itemDB = FMDatabase(path: databasePath as String)
         
-        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        formatter.timeStyle = .ShortStyle
+        let date = formatter.stringFromDate(NSDate())
         
         if itemDB.open() {
             
-            let insertSQL = "INSERT INTO HISTORY (ITEMFK, VALUE, REFERENCE, DATE, OPERATION) VALUES ('\(itemID)','\(value.text)','\(reference.text)','\(date)','\(operation)')"
+            let insertSQL = "INSERT INTO HISTORY (ITEMFK, VALUE, REFERENCE, DATE, OPERATION) VALUES ('\(itemID)','\(value.text)','\(reference.text)','\(date)','\(operation.lowercaseString)')"
             
             var result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
             
@@ -135,6 +233,10 @@ class WalletAddRemItem: UIViewController {
         }
         
         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func confirmButton(sender: AnyObject) {
+        confirmAction()
     }
     
 }

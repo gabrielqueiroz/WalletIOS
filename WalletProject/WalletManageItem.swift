@@ -22,7 +22,7 @@ class WalletManageItem: UIViewController {
         
         let docsDir = dirPaths[0] as! String
         
-        databasePath = docsDir.stringByAppendingPathComponent("wallet_0.2.db")
+        databasePath = docsDir.stringByAppendingPathComponent("wallet_0.5.db")
         
         if !filemgr.fileExistsAtPath(databasePath as String) {
             
@@ -46,6 +46,7 @@ class WalletManageItem: UIViewController {
     @IBOutlet weak var itemIcon: UIImageView!
     
     var itemID = String()
+    var value = String()
     
     override func viewWillAppear(animated: Bool) {
         
@@ -58,9 +59,9 @@ class WalletManageItem: UIViewController {
                 withArgumentsInArray: nil)
             
             if results?.next() == true {
-                itemID = results!.stringForColumn("itemid")
-                let text = results?.stringForColumn("value")
-                itemValue.text = "$ "+text!
+                itemID = results!.intForColumn("itemid").description
+                value = results!.stringForColumn("value")
+                itemValue.text = "$ "+value
                 let itemText = results?.stringForColumn("icon")
                 itemIcon.image = UIImage(named: itemText!)
             }
@@ -78,13 +79,17 @@ class WalletManageItem: UIViewController {
             if let destination = segue.destinationViewController as? WalletAddRemItem {
                 destination.itemID = itemID
                 destination.operation = "Adding"
-                destination.oldValue = itemValue.text!
+                destination.oldValue = value
             }
         } else if segue.identifier == "quickRemove" {
             if let destination = segue.destinationViewController as? WalletAddRemItem {
                 destination.itemID = itemID
                 destination.operation = "Removing"
-                destination.oldValue = itemValue.text!
+                destination.oldValue = value
+            }
+        } else if segue.identifier == "history" {
+            if let destination = segue.destinationViewController as? WalletHistory {
+                destination.itemID = itemID
             }
         }
         
