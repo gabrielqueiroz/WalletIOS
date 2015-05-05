@@ -87,7 +87,7 @@ class WalletHistory: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) as! UITableViewCell
             
             cell.textLabel?.numberOfLines = 2
-            cell.textLabel?.text = "On \(date) \nYou were \(icon) $\(value) with \(local)"
+            cell.textLabel?.text = "On \(date) \n$\(value) with \(local)"
             cell.imageView?.image = UIImage(named: icon)
             
             return cell

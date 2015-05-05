@@ -87,8 +87,14 @@ class WalletAddRemItem: UIViewController {
             withArgumentsInArray: nil)
             
             if(results?.next() == false){
-                var insertSQL = "INSERT INTO REFERENCE (NAME, ITEMFK) VALUES ('Restaurant','\(itemID)')"
+                var insertSQL = "INSERT INTO REFERENCE (NAME, ITEMFK) VALUES ('Others','\(itemID)')"
                 var result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
+                if !result {
+                    println("Warn: FAILED TO ADD A NEW REFERENCE")
+                }
+
+                insertSQL = "INSERT INTO REFERENCE (NAME, ITEMFK) VALUES ('Restaurant','\(itemID)')"
+                result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
                 if !result {
                     println("Warn: FAILED TO ADD A NEW REFERENCE")
                 }
@@ -145,7 +151,7 @@ class WalletAddRemItem: UIViewController {
         let itemDB = FMDatabase(path: databasePath as String)
         
         if itemDB.open() {
-            let insertSQL = "DELETE FROM REFERENCE WHERE NAME=('\(pickerUI.description)')"
+            let insertSQL = "DELETE FROM REFERENCE WHERE NAME=('\(pickerValue)')"
             let result = itemDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
             if !result {
                 println("Warn: FAILED TO DELETE A REFERENCE")
@@ -157,6 +163,8 @@ class WalletAddRemItem: UIViewController {
             println("Error: \(itemDB.lastErrorMessage())")
         }
     }
+    
+    var pickerValue = String()
 
     @IBOutlet weak var pickerUI: UIPickerView!
     
@@ -169,6 +177,8 @@ class WalletAddRemItem: UIViewController {
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String {
+        pickerValue = picker[row]
+        reference.text = picker[row]
         return picker[row]
     }
     
@@ -181,7 +191,6 @@ class WalletAddRemItem: UIViewController {
     }
     
     @IBAction func remReference(sender: UIButton) {
-        println("BUTTON CLICKED \(pickerUI.)")
         deleteReference()
         picker = ["-"]
         loadReferences()
@@ -195,6 +204,7 @@ class WalletAddRemItem: UIViewController {
         formatter.dateStyle = NSDateFormatterStyle.MediumStyle
         formatter.timeStyle = .ShortStyle
         let date = formatter.stringFromDate(NSDate())
+
         
         if itemDB.open() {
             
@@ -235,8 +245,28 @@ class WalletAddRemItem: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     
+    func displayReferenceAlert(){
+        let alertController = UIAlertController(title: "Warning", message: "You need to type a reference", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func displayValueAlert(){
+            let alertController = UIAlertController(title: "Warning", message: "You need to type a value", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func confirmButton(sender: AnyObject) {
-        confirmAction()
+        if (value.text == ""){
+            displayValueAlert()
+        } else if (reference.text == "" || reference.text == "-"){
+            displayReferenceAlert()
+        } else {
+            confirmAction()
+        }
+        
     }
     
 }

@@ -79,7 +79,7 @@
                                     <constraint firstAttribute="width" constant="70" id="Esq-O9-Nuo"/>
                                 </constraints>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ke0-gA-oPn">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ke0-gA-oPn">
                                 <rect key="frame" x="14" y="316" width="572" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Iqh-Re-FTS"/>
@@ -354,15 +354,6 @@
                                     <outlet property="delegate" destination="s5i-lw-08q" id="D9k-kt-EFP"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-vt-wY9">
-                                <rect key="frame" x="374" y="423" width="210" height="30"/>
-                                <state key="normal" title="Remove reference from the list">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="remReference:" destination="s5i-lw-08q" eventType="touchUpInside" id="RrI-Qz-Wob"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDq-ho-kfc">
                                 <rect key="frame" x="420" y="253" width="164" height="30"/>
                                 <state key="normal" title="Add reference to the list">
@@ -370,6 +361,15 @@
                                 </state>
                                 <connections>
                                     <action selector="addReference:" destination="s5i-lw-08q" eventType="touchUpInside" id="6RX-uZ-UPF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-vt-wY9">
+                                <rect key="frame" x="374" y="452" width="210" height="30"/>
+                                <state key="normal" title="Remove reference from the list">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="remReference:" destination="s5i-lw-08q" eventType="touchUpInside" id="RrI-Qz-Wob"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -393,7 +393,7 @@
                             <constraint firstItem="GGp-6o-f3K" firstAttribute="centerX" secondItem="I2s-i1-y2R" secondAttribute="centerX" id="V4G-QH-W4H"/>
                             <constraint firstItem="PDq-ho-kfc" firstAttribute="top" secondItem="GGp-6o-f3K" secondAttribute="bottom" constant="8" symbolic="YES" id="Wlj-HB-hSt"/>
                             <constraint firstItem="GGp-6o-f3K" firstAttribute="top" secondItem="I2s-i1-y2R" secondAttribute="bottom" constant="8" symbolic="YES" id="XBx-L0-3uk"/>
-                            <constraint firstItem="c4u-vt-wY9" firstAttribute="bottom" secondItem="bMx-OA-xfV" secondAttribute="bottom" constant="4" id="YS5-Kg-CyJ"/>
+                            <constraint firstItem="c4u-vt-wY9" firstAttribute="bottom" secondItem="bMx-OA-xfV" secondAttribute="bottom" constant="33" id="YS5-Kg-CyJ"/>
                             <constraint firstItem="H1A-cV-S9M" firstAttribute="leading" secondItem="bMx-OA-xfV" secondAttribute="leading" id="Z1f-DA-VU4"/>
                             <constraint firstItem="JEE-71-qRA" firstAttribute="top" secondItem="epY-Ac-qM2" secondAttribute="bottom" constant="-25" id="cCV-cJ-pXn"/>
                             <constraint firstItem="U2r-Ga-pQe" firstAttribute="trailing" secondItem="aBm-xz-dhd" secondAttribute="trailing" id="cUN-2V-4t0"/>
@@ -578,6 +578,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VNk-Ya-Qiz" id="dgl-OQ-sa0">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

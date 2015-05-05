@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  Wallet
+//  WalletMain.swift
+//  WalletProject
 //
 //  Created by Gabriel Queiroz on 4/24/15.
 //  Copyright (c) 2015 Gabriel Queiroz. All rights reserved.

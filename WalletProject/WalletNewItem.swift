@@ -60,6 +60,10 @@ class WalletNewItem: UIViewController {
             case 2:
                 iconLeft.image = UIImage(named: "wallet")
                 iconCenter.image = UIImage(named: "bank")
+                iconRight.image = UIImage(named: "shopcart")
+            case 3:
+                iconLeft.image = UIImage(named: "bank")
+                iconCenter.image = UIImage(named: "shopcart")
                 iconRight.image = nil
             default:
                 iconCenter.image = UIImage(named: "wallet")
@@ -100,6 +104,7 @@ class WalletNewItem: UIViewController {
             case 0: itemIcon = "creditcard"
             case 1: itemIcon = "wallet"
             case 2: itemIcon = "bank"
+            case 3: itemIcon = "shopcart"
             default: itemIcon = "wallet"
         }
         
